@@ -1,0 +1,57 @@
+body {
+  font-size: 15pt;
+  margin: 0;
+  overflow: hidden;
+}
+#start-button{
+  padding: 5px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  
+}
+#canvas1 {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set canvas width to 100% of the viewport */
+  height: 100%; /* Set canvas height to 100% of the viewport */
+}
+
+#game-ui {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  z-index: 10;
+}
+
+#restart-button {
+  padding: 5px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#restart-button:hover {
+  background-color: #0056b3;
+}
+
+#score {
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
