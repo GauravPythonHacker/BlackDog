@@ -15,7 +15,7 @@ const enemyImage = new Image();
 enemyImage.src = 'enemy.png';
 
 const startScreenImage = new Image();
-startScreenImage.src = '/startscreen.png'; // Replace with your image file path
+startScreenImage.src = 'startscreen.png'; // Replace with your image file path
 let speed = 5; // Initial speed of the game
 
 
