@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Canvas Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Black Dog Runner</title>
 </head>
+
 <body>
-    <canvas id="canvas1"></canvas>
-    <div id="game-ui">
-        <button id="restart-button">Restart</button>
-        <span id="score">Score: 0</span>
-        <button id="start-button">Start Game</button>
-    </div>
-    <script src="main.js"></script>
+<div id = 'mainbox'>
+  <canvas id="canvas1"></canvas>
+  <div id="game-ui">
+    <button id="restart-button">Restart</button>
+    <button id="start-button">Start Game</button>
+  </div>
+ <span id="score">Score: 0</span>
+  <button id="pause-button"  style="display: none;">Pause</button>
+  <button id="help-button" style="display: none;">Help</button>
+  <div id="help-modal" style="display: none;">
+    <p>Game Instructions:</p>
+    <ul>
+      <li>Press **Arrow Up** or swipe up or tap on screen to jump.</li>
+      <li>Collect coins to increase your score by 5 points.</li>
+      <li>Collect food to keep running and increase your score by 10.</li>
+      <li>Avoid colliding with enemies.</li>
+
+      <li>Press the **Pause** button to pause the game.</li>
+    </ul>
+    <button id="close-help-button">Close</button>
+  </div>
+
+</div>
+  <div class="rotate-message" style="display: none;">
+    Please rotate your device to landscape mode.
+  </div>
+  <script src="main.js"></script>
 </body>
+
 </html>
