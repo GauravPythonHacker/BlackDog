@@ -1,19 +1,75 @@
+
 body {
   font-size: 15pt;
   margin: 0;
   overflow: hidden;
 }
-#start-button{
-  padding: 5px 20px;
+
+#pause-button {
+    right: 27.5%;
+}
+
+#help-button {
+    right: 20%;
+}
+
+#help-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 20;
+    text-align: center;
+}
+
+#help-modal button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+
+#pause-button, #help-button {
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    padding: 0.5em 0.8em; /* Relative units for padding */
+    background-color: navajowhite;
+    color: black;
+    font-size: 1em; /* Relative to font size for scalability */
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
+
+}
+
+#pause-button:hover,
+#help-button:hover {
+  background-color: red;
+  transform: scale(1.1);
+  /* Add a slight zoom effect on hover */
+}
+
+#start-button, #restart-button{
+  padding: 0.5em 1.5em; /* Relative units for padding */
   border: none;
-  background-color: #007bff;
+  background-color: black;
   color: white;
-  font-size: 16px;
+  font-size: 1em; /* Relative to font size for scalability */
   cursor: pointer;
   border-radius: 5px;
-
-  
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
 }
+
+#start-button:hover, #restart-button:hover {
+  background-color: red;
+  transform: scale(1.1); /* Add a slight zoom effect on hover */
+}
+
 #canvas1 {
   display: block;
   position: absolute;
@@ -26,32 +82,76 @@ body {
 #game-ui {
   position: absolute;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 5%;
   display: flex;
   gap: 20px;
   font-family: Arial, sans-serif;
-  font-size: 18px;
+  font-size: 1em;
   z-index: 10;
 }
 
-#restart-button {
-  padding: 5px 20px;
-  border: none;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-#restart-button:hover {
-  background-color: #0056b3;
-}
-
 #score {
+  position: absolute;
+  top: 20px;
+  left: 5%;
+  font-size: 2rem;
   color: black;
-  border: 2px solid black;
   border-radius: 5px;
   padding: 5px 10px;
 }
+
+/* Portrait view adjustments */
+@media (orientation: portrait) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+  }
+
+
+  #canvas1 {
+    transform: rotate(90deg);
+    width: 100vh;
+    height: 100vw;
+  }
+
+  .rotate-message {
+    position: absolute;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  #start-button, #restart-button {
+    font-size: 0.8em; /* Slightly smaller buttons in portrait mode */
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  #start-button, #restart-button {
+    font-size: 0.9em;
+    padding: 0.4em 1.2em;
+  }
+
+  #score {
+    font-size: 0.9em;
+    padding: 0.4em 0.8em;
+  }
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 480px) {
+  #start-button, #restart-button {
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+  }
+
+  #score {
+    font-size: 0.8em;
+    padding: 0.3em 0.6em;
+  }
+}
+
