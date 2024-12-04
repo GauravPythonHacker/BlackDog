@@ -27,9 +27,9 @@ body {
 
 #help-button{
     position: absolute;
-    top: 20px;
+    top: 40px;
     z-index: 10;
-    padding: 0.5em 0.8em; /* Relative units for padding */
+  padding: 0.3em 1em; /* Relative units for padding */
     background-color: navajowhite;
     color: black;
     font-size: 1em; /* Relative to font size for scalability */
@@ -43,16 +43,16 @@ body {
 
 #pause-button{
     position: absolute;
-    top: 20px;
+    top: 40px;
     z-index: 10;
-    padding: 0.5em 0.8em; /* Relative units for padding */
+  padding: 0.3em 1em; /* Relative units for padding */
     background-color: navajowhite;
     color: black;
     font-size: 1em; /* Relative to font size for scalability */
     cursor: pointer;
     border-radius: 15%;
     transform: translate(0%, -50%);
-    left: 45%;
+    left: 35%;
     transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth animations */
 
 }
@@ -157,14 +157,20 @@ body {
 
 /* Responsive adjustments for very small screens */
 @media (max-width: 480px) {
-  #start-button, #restart-button {
-    font-size: 0.8em;
-    padding: 0.3em 1em;
+  #start-button,
+  #restart-button {
+    font-size: 0.8rem;
+    padding: 0.4em 0.8em;
   }
 
   #score {
-    font-size: 0.8em;
-    padding: 0.3em 0.6em;
+    font-size: 0.8rem;
+    padding: 0.4em;
+  }
+
+  #help-button,
+  #pause-button {
+    font-size: 0.4rem;
+    padding: 0.4em 0.6em;
   }
 }
-
